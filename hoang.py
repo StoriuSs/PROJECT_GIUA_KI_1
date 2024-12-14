@@ -54,25 +54,44 @@ def edit_student(students, main_frame):
     
     
 def delete_student(students, main_frame):
-        clear_main_frame(main_frame)
-        tk.Label(main_frame, text="Xóa sinh viên").pack()
-        tk.Label(main_frame, text="Nhập ID sinh viên cần xóa:").pack()
-        id_entry = tk.Entry(main_frame)
-        id_entry.pack()
+    clear_main_frame(main_frame)
+    tk.Label(main_frame, text="Xóa sinh viên", font=("Arial", 16)).pack(pady=10)
+    tk.Label(main_frame, text="Nhập ID sinh viên cần xóa:", font=("Arial", 12)).pack(pady=5)
+    
+    id_entry = tk.Entry(main_frame, font=("Arial", 12))
+    id_entry.pack(pady=5)
 
-        def delete_by_id():
-            student_id = id_entry.get()
-            student = None  
-            for s in students:  
-                if s["id"] == student_id:  
-                    student = s  
-                    break  
-
-            if not student:
-                messagebox.showerror("Lỗi", "Không tìm thấy sinh viên với ID này.")
-                return
+    def delete_by_id():
+        student_id = id_entry.get().strip()
+        student = None  
+        
+        for s in students:  
+            if s["id"] == student_id:  
+                student = s  
+                break  
+        
+        if not student:
+            messagebox.showerror("Lỗi", "Không tìm thấy sinh viên với ID này.")
+            return
+        
+        student_info = (
+            f"ID: {student['id']}\n"
+            f"Tên: {student['name']}\n"
+            f"Tuổi: {student['age']}\n"
+            f"Ngành: {student['major']}\n"
+            f"Lớp: {student['Class']}\n"
+            f"Điểm: {student['grade']}"
+        )
+        confirm = messagebox.askyesno(
+            "Xác nhận xóa",
+            f"Bạn có chắc chắn muốn xóa sinh viên này không?\n\n{student_info}"
+        )
+        
+        if confirm:
             students.remove(student)
-            messagebox.showinfo("Thông báo", "Xóa sinh viên thành công!")
+            messagebox.showinfo("Thành công", "Sinh viên đã được xóa.")
             show_students(students, main_frame)
-
-        tk.Button(main_frame, text="Xóa", command=delete_by_id).pack(pady=10)
+        else:
+            messagebox.showinfo("Hủy bỏ", "Đã hủy thao tác xóa sinh viên.")
+    
+    tk.Button(main_frame, text="Xóa", font=("Arial", 12), command=delete_by_id).pack(pady=10)
