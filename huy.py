@@ -1,74 +1,51 @@
-import csv
-from hieu import save_students
+import tkinter as tk
+from tkinter import messagebox
+from gpt import clear_main_frame, show_students
 
-# Hàm thêm sinh viên. Parameter students là 1 list gồm các dictionaries là thông tin của các sinh viên hiện có trong file students.csv
-def add_student(students):
-    # Yêu cầu user nhập mã sinh viên
-    while True:
-        id = input('Nhập mã sinh viên: ').strip()
-        if not id:
-            print("Mã sinh viên không được để trống. Vui lòng thử lại.")
-            continue
 
-        # Kiểm tra nếu mã sinh viên đã tồn tại trong file
-        with open("students.csv", 'r') as file:
-            reader = csv.DictReader(file)
-            if any(student['id'] == id for student in reader):
-                print("Mã sinh viên đã tồn tại! Vui lòng nhập mã khác.")
-                continue
-        break
-    
-    # Yêu cầu nhập tên sinh viên
-    while True:
-        name = input('Nhập tên sinh viên: ').strip()
-        if name:
-            break
-        print("Tên sinh viên không được để trống.")
+def add_student(students, main_frame):
+    # Giao diện thêm sinh viên
+    clear_main_frame(main_frame)
+    tk.Label(main_frame, text="Thêm sinh viên").pack()
+    fields = ["id", "name", "age", "major", "Class", "grade"]
+    entries = {}
 
-    # Yêu cầu nhập tuổi sinh viên
-    while True:
-        age = input('Nhập tuổi sinh viên: ').strip()
-        if age.isdigit() and int(age) > 0:
-            age = int(age)
-            break
-        print("Tuổi không hợp lệ. Vui lòng nhập một số nguyên dương.")
+    for field in fields:
+        row = tk.Frame(main_frame)
+        row.pack(fill="x", padx=5, pady=5)
+        tk.Label(row, text=field.capitalize()).pack(side="left")
+        entry = tk.Entry(row)
+        entry.pack(side="right", expand=True, fill="x")
+        entries[field] = entry
 
-    # Yêu cầu nhập ngành của sinh viên
-    while True:
-        major = input('Nhập ngành của sinh viên: ').strip()
-        if major:
-            break
-        print("Ngành không được để trống.")
-
-    # Yêu cầu nhập lớp của sinh viên
-    while True:
-        Class = input('Nhập lớp của sinh viên: ').strip()
-        if Class:
-            break
-        print("Lớp không được để trống.")
-
-    # Yêu cầu nhập điểm của sinh viên
-    while True:
+    # Hàm lưu sinh viên đã được thêm vào danh sách
+    def save_added_student():
         try:
-            grade = float(input('Nhập điểm của sinh viên (0-10): ').strip())
-            if 0 <= grade <= 10:
-                break
-            print("Điểm không hợp lệ. Vui lòng nhập một số từ 0 đến 10.")
-        except ValueError:
-            print("Điểm không hợp lệ. Vui lòng nhập một số thực.")
-    
-    # Lưu thông tin của sinh viên này vào 1 dictionary
-    new_student = {
-        "id": id,
-        "name": name,
-        "age": age,
-        "major": major,
-        "Class": Class,
-        "grade": grade
-    }
+            new_student = {
+                "id": entries["id"].get(),
+                "name": entries["name"].get(),
+                "age": int(entries["age"].get()),
+                "major": entries["major"].get(),
+                "Class": entries["Class"].get(),
+                "grade": float(entries["grade"].get()),
+            }
 
-    # Thêm dictionary này vào list students
-    students.append(new_student)
-    # Sao lưu thông tin vào file students.csv
-    save_students(students, "students.csv")
-    print("Đã thêm sinh viên!\n")
+                
+            for student in students:
+                if student["id"] == new_student["id"]:
+                    raise ValueError("ID đã tồn tại.")
+            if new_student["age"] < 0:
+                raise ValueError("Tuổi phải lớn hơn 0.")
+            if new_student["grade"] < 0 or new_student["grade"] > 10:
+                raise ValueError("Điểm phải nằm trong khoảng từ 0 đến 10.")
+            for info in new_student.values():
+                if not info:    
+                    raise ValueError("Không được để trống thông tin.")
+
+            students.append(new_student)
+            messagebox.showinfo("Thông báo", "Thêm sinh viên thành công!")
+            show_students(students, main_frame)
+        except ValueError as e:
+            messagebox.showerror("Lỗi", str(e))
+
+    tk.Button(main_frame, text="Thêm", command=save_added_student).pack(pady=10)

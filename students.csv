@@ -1,44 +1,43 @@
 id,name,age,major,Class,grade
-B23CNTT001,Nguyen Van A,19,Cong Nghe Thong Tin,CN05,8.0
-B21CNTT003,Tran Thi B,21,Cong Nghe Thong Tin,CN01,8.5
-B24DTVT006,Le Van C,18,Dien Tu Vien Thong,DT03,9.0
-B24KHMT057,Pham Duc D,18,Khoa Hoc May Tinh,KH03,7.5
 B23CNTT007,Nguyen Duc A,19,Cong Nghe Thong Tin,CN05,8.0
 B23CNTT009,Le Van A,19,Cong Nghe Thong Tin,CN05,7.5
-B24CNTT065,Chu Hong Duc,18,Cong Nghe Thong Tin,CN01,9.0
-B24DTVT086,Nguyen Dang Cap,18,Dien Tu Vien Thong,DT03,8.0
-B24QTKD023,Nguyen Viet Dung,18, Quan Tri Kinh Doanh,QT01,9.0
-B23TTDPT089,Nguyen Thi Lan,19, Truyen Thong Da Phuong Tien,TT06,8.5
-B21DTVT001,Pham Minh Tu,20,Dien Tu Vien Thong,DT02,8.7
+B23CNTT001,Nguyen Van A,19,Cong Nghe Thong Tin,CN05,8.0
+B21CNTT003,Tran Thi B,21,Cong Nghe Thong Tin,CN01,8.5
+B24CNTT073,Hoang Thi Bao,19,Cong Nghe Thong Tin,CN03,8.4
 B24CNTT054,Nguyen Thi Bao,21,Cong Nghe Thong Tin,CN03,8.2
-B23KHMT042,Le Thi Kim,19,Khoa Hoc May Tinh,KH01,7.7
-B24CNTT073,Nguyen Thi Lan,18,Cong Nghe Thong Tin,CN04,8.4
-B21DTVT045,Tran Thi Thanh,22,Dien Tu Vien Thong,DT01,9.0
-B23KHMT016,Hoang Minh Tu,20,Khoa Hoc May Tinh,KH02,7.9
-B24CNTT033,Nguyen Thi Thu,19,Cong Nghe Thong Tin,CN02,8.3
-B24QTKD002,Nguyen Hoang Son,20,Quan Tri Kinh Doanh,QT02,8.9
-B23CNTT087,Le Thi Thanh,21,Cong Nghe Thong Tin,CN03,8.0
-B24KHMT027,Pham Thi Lan,20,Khoa Hoc May Tinh,KH01,8.5
-B23DTVT063,Nguyen Thi Mai,21,Dien Tu Vien Thong,DT02,7.7
-B24CNTT039,Chu Minh Tu,19,Cong Nghe Thong Tin,CN04,9.1
-B23KHMT012,Le Thi Lan,18,Khoa Hoc May Tinh,KH03,8.6
+B24DTVT006,Le Van C,18,Dien Tu Vien Thong,DT03,9.0
+B24DTVT086,Nguyen Dang Cap,18,Dien Tu Vien Thong,DT03,8.0
+B24KHMT057,Pham Duc D,18,Khoa Hoc May Tinh,KH03,7.5
+B24CNTT065,Chu Hong Duc,18,Cong Nghe Thong Tin,CN01,9.0
+B24QTKD023,Nguyen Viet Dung,18, Quan Tri Kinh Doanh,QT01,9.0
+B24KHMT021,Hoang Minh Hoa,22,Khoa Hoc May Tinh,KH03,8.3
 B24CNTT056,Nguyen Thi Hoa,20,Cong Nghe Thong Tin,CN02,8.8
-B21DTVT084,Nguyen Minh Tam,22,Dien Tu Vien Thong,DT03,7.6
-B24KHMT093,Pham Thi Mai,21,Khoa Hoc May Tinh,KH02,9.2
+B24CNTT136,Nguyen Thi Huy,18,Cong Nghe Thong Tin,CN04,7.0
+B23DTVT017,Pham Minh Kim,19,Dien Tu Vien Thong,DT01,7.8
+B23KHMT042,Le Thi Kim,19,Khoa Hoc May Tinh,KH01,7.7
 B24CNTT029,Nguyen Thi Kim,20,Cong Nghe Thong Tin,CN05,7.5
 B23DTVT011,Nguyen Thi Kim,19,Dien Tu Vien Thong,DT01,8.0
-B24CNTT073,Hoang Thi Bao,19,Cong Nghe Thong Tin,CN03,8.4
-B24KHMT019,Le Thi Thu,22,Khoa Hoc May Tinh,KH02,8.7
+B23KHMT012,Le Thi Lan,18,Khoa Hoc May Tinh,KH03,8.6
+B23TTDPT089,Nguyen Thi Lan,19, Truyen Thong Da Phuong Tien,TT06,8.5
+B24CNTT073,Nguyen Thi Lan,18,Cong Nghe Thong Tin,CN04,8.4
 B23QTKD017,Nguyen Thi Lan,19,Quan Tri Kinh Doanh,QT03,7.9
-B24CNTT045,Tran Thi Lan,20,Cong Nghe Thong Tin,CN01,8.9
-B23DTVT072,Pham Thi Thu,21,Dien Tu Vien Thong,DT04,8.0
-B24CNTT063,Nguyen Minh Tu,19,Cong Nghe Thong Tin,CN02,9.0
-B24KHMT021,Hoang Minh Hoa,22,Khoa Hoc May Tinh,KH03,8.3
-B23CNTT056,Chu Thi Mai,20,Cong Nghe Thong Tin,CN04,8.4
 B24KHMT074,Nguyen Thi Lan,22,Khoa Hoc May Tinh,KH01,8.7
-B23DTVT017,Pham Minh Kim,19,Dien Tu Vien Thong,DT01,7.8
-B24CNTT027,Le Thi Thu,18,Cong Nghe Thong Tin,CN02,8.3
 B23KHMT049,Nguyen Thi Lan,20,Khoa Hoc May Tinh,KH03,8.2
+B24KHMT027,Pham Thi Lan,20,Khoa Hoc May Tinh,KH01,8.5
+B24CNTT045,Tran Thi Lan,20,Cong Nghe Thong Tin,CN01,8.9
+B23CNTT056,Chu Thi Mai,20,Cong Nghe Thong Tin,CN04,8.4
+B23DTVT063,Nguyen Thi Mai,21,Dien Tu Vien Thong,DT02,7.7
+B24KHMT093,Pham Thi Mai,21,Khoa Hoc May Tinh,KH02,9.2
 B24CNTT099,Hoang Dai Phao,18,Cong Nghe Thong Tin,CN04,8.0
-B24CNTT136,Nguyen Thi Huy,18,Cong Nghe Thong Tin,CN04,7.0
-
+B24QTKD002,Nguyen Hoang Son,20,Quan Tri Kinh Doanh,QT02,8.9
+B21DTVT084,Nguyen Minh Tam,22,Dien Tu Vien Thong,DT03,7.6
+B23CNTT087,Le Thi Thanh,21,Cong Nghe Thong Tin,CN03,8.0
+B21DTVT045,Tran Thi Thanh,22,Dien Tu Vien Thong,DT01,9.0
+B24KHMT019,Le Thi Thu,22,Khoa Hoc May Tinh,KH02,8.7
+B24CNTT027,Le Thi Thu,18,Cong Nghe Thong Tin,CN02,8.3
+B24CNTT033,Nguyen Thi Thu,19,Cong Nghe Thong Tin,CN02,8.3
+B23DTVT072,Pham Thi Thu,21,Dien Tu Vien Thong,DT04,8.0
+B24CNTT039,Chu Minh Tu,19,Cong Nghe Thong Tin,CN04,9.1
+B23KHMT016,Hoang Minh Tu,20,Khoa Hoc May Tinh,KH02,7.9
+B24CNTT063,Nguyen Minh Tu,19,Cong Nghe Thong Tin,CN02,9.0
+B21DTVT001,Pham Minh Tu,20,Dien Tu Vien Thong,DT02,8.7
