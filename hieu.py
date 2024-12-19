@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 import csv
-from gpt import clear_main_frame
+from gpt import clear_main_frame, show_students
 
 STUDENTS_FILE = "students.csv"
 ACCOUNTS_FILE = "accounts.csv"
@@ -104,15 +104,7 @@ def filter_students(students, main_frame):
             # Hiển thị kết quả
             clear_main_frame(main_frame)
             if results:
-                tree = ttk.Treeview(main_frame, columns=("stt", "id", "name", "age", "major", "Class", "grade"), show="headings")
-                tree.pack(fill="both", expand=True)
-
-                for col in ["stt", "id", "name", "age", "major", "Class", "grade"]:
-                    tree.heading(col, text="STT" if col == "stt" else col.capitalize())
-                    tree.column(col, anchor="center")
-
-                for idx, student in enumerate(results, start=1):
-                    tree.insert("", "end", values=(idx, student["id"], student["name"], student["age"], student["major"], student["Class"], student["grade"]))
+                show_students(results, main_frame)
             else:
                 tk.Label(main_frame, text="Không tìm thấy sinh viên nào phù hợp với các tiêu chí đã nhập.", font=("Arial", 12), fg="red").pack(pady=10)
                 
