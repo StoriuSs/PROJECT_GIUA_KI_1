@@ -116,7 +116,6 @@ def save_data(students):
     
 # Hàm tạo giao diện chính của chương trình
 def init_ui(role):
-    global main_frame
     students = load_students()
     
     root = tk.Tk()
