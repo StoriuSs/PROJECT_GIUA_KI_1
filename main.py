@@ -157,7 +157,6 @@ def init_ui(role):
         actions_menu.add_command(label="Phân tích điểm ngành", command=lambda: analyze_by_major(students, main_frame))
         actions_menu.add_command(label="Phân tích điểm lớp", command=lambda: analyze_by_class(students, main_frame))
 
-    load_students()
     show_students(students, main_frame)
 
     root.mainloop()
